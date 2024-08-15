@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Task</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            
+            
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        td {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td onclick="showPosition(this)">1,1</td>
+                <td onclick="showPosition(this)">1,2</td>
+                <td onclick="showPosition(this)">1,3</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">2,1</td>
+                <td onclick="showPosition(this)">2,2</td>
+                <td onclick="showPosition(this)">2,3</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">5,1</td>
+                <td onclick="showPosition(this)">6,2</td>
+                <td onclick="showPosition(this)">1,7</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">9,3</td>
+                <td onclick="showPosition(this)">8,4</td>
+                <td onclick="showPosition(this)">9,3</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">3,1</td>
+                <td onclick="showPosition(this)">3,2</td>
+                <td onclick="showPosition(this)">3,3</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">geeta</td>
+                <td onclick="showPosition(this)">sita</td>
+                <td onclick="showPosition(this)">babita</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">monu</td>
+                <td onclick="showPosition(this)">sonu</td>
+                <td onclick="showPosition(this)">tonu</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">mohit</td>
+                <td onclick="showPosition(this)">mithiya</td>
+                <td onclick="showPosition(this)">20</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">ram</td>
+                <td onclick="showPosition(this)">shayam</td>
+                <td onclick="showPosition(this)">mohan</td>
+            </tr>
+            <tr>
+                <td onclick="showPosition(this)">deepu</td>
+                <td onclick="showPosition(this)">jajaj</td>
+                <td onclick="showPosition(this)">78</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function showPosition(cell) {
+            var row = cell.parentNode.rowIndex;
+            var col = cell.cellIndex;
+            alert('Row: ' + row + ', Column: ' + col);
+        }
+    </script>
+</body>
+</html>
